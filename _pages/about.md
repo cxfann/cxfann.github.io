@@ -49,14 +49,13 @@ Fine-grained List-wise Alignment for Generative Medication Recommendation
 Process-Supervised LLM Recommenders via Flow-guided Tuning
 
 Chongming Gao<sup>#</sup>, Mengyao Gao<sup>#</sup>, **Chenxiao Fan**, Shuai Yuan, Wentao Shi, Xiangnan He
-<sub>Equal contribution</sub>  
+
+<sup>#</sup>Equal contribution 
 
 [**Paper**](https://arxiv.org/pdf/2503.07377)
 [**Code**](https://github.com/Mr-Peach0301/Flower)
 </div>
 </div>
-
-
 
 # 🖥️ Preprints
 
@@ -66,7 +65,8 @@ Chongming Gao<sup>#</sup>, Mengyao Gao<sup>#</sup>, **Chenxiao Fan**, Shuai Yuan
 Fine-grained Alignment of Large Language Models for General Medication Recommendation without Overprescription
 
 Zihao Zhao<sup>#</sup>, **Chenxiao Fan**<sup>#</sup>, Junlong Liu, Zheng Wang, Xiangnan He, Chongming Gao, Juan Li, Fuli Feng 
-<sub>Equal contribution</sub>  
+
+<sup>#</sup>Equal contribution 
 
 [**Paper**](https://arxiv.org/pdf/2503.03687)
 [**Code**](https://github.com/zzhUSTC2016/LAMO)
@@ -82,12 +82,8 @@ Zihao Zhao<sup>#</sup>, **Chenxiao Fan**<sup>#</sup>, Junlong Liu, Zheng Wang, X
 - *2021, 2022, 2024*: Excellent Student Scholarship
 
 # 📖 Educations
-- *2025.09 – 2028.06 (expected)*, M.Eng. in Intelligent Science and Technology,  
-  [School of Artificial Intelligence and Data Science](https://saids.ustc.edu.cn/),  
-  [University of Science and Technology of China](https://www.ustc.edu.cn/)
-- *2021.09 – 2025.06*, B.Eng. in Electronic Information Engineering,  
-  [School of Information Science and Technology](https://sist.ustc.edu.cn/),  
-  [University of Science and Technology of China](https://www.ustc.edu.cn/)
+- *2025.09 – 2028.06 (expected)*, M.Eng. in Intelligent Science and Technology, School of Artificial Intelligence and Data Science, University of Science and Technology of China
+- *2021.09 – 2025.06*, B.Eng. in Electronic Information Engineering, School of Information Science and Technology, University of Science and Technology of China
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
