@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Chenxiao Fan**, a first-year Master's student in the [Laboratory of Data Science (LDS)](https://data-science.ustc.edu.cn/) at the [University of Science and Technology of China (USTC)](https://www.ustc.edu.cn/), advised by [Prof. Xiangnan He](https://hexiangnan.github.io/) and [Prof. Fuli Feng](https://fulifeng.github.io/).  
+I am **Chenxiao Fan**, a first-year Master's student in the [Lab of Data Science (LDS)](https://data-science.ustc.edu.cn/) at the [University of Science and Technology of China (USTC)](https://www.ustc.edu.cn/), advised by [Prof. Xiangnan He](https://hexiangnan.github.io/) and [Prof. Fuli Feng](https://fulifeng.github.io/).  
 
 I received my Bachelor's degree in Electronic Information Engineering from the [School of Information Science and Technology](https://sist.ustc.edu.cn/), USTC, in 2025. Currently, I am pursuing my Master's degree in Intelligent Science and Technology at the [School of Artificial Intelligence and Data Science](https://saids.ustc.edu.cn/), USTC.  
 
@@ -27,7 +27,7 @@ My research interests include **large language models (LLMs)**, **recommender sy
 - *2025.09*: &nbsp;🎉🎉 One paper is accepted by **NeurIPS'25** as a **Spotlight** about medication recommendation.
 - *2025.04*: &nbsp;🎉🎉 One paper is accepted by **SIGIR'25** about flow-guided LLM recommendation.
 
-# 📝 Publications 
+# 📑 Publications 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025 <strong>Spotlight</strong></div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -57,9 +57,9 @@ Chongming Gao<sup>#</sup>, Mengyao Gao<sup>#</sup>, **Chenxiao Fan**, Shuai Yuan
 </div>
 </div>
 
-# 🖥️ Preprints
+# 📝 Preprints
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/LAMO.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Fine-grained Alignment of Large Language Models for General Medication Recommendation without Overprescription
