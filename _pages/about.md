@@ -29,7 +29,7 @@ My research interests include **large language models (LLMs)**, **recommender sy
 
 # 📑 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025 <strong>Spotlight</strong></div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025 <strong>Spotlight</strong></div><img src='images/FLAME.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Fine-grained List-wise Alignment for Generative Medication Recommendation
@@ -43,7 +43,7 @@ Fine-grained List-wise Alignment for Generative Medication Recommendation
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGIR 2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGIR 2025</div><img src='images/Flower.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Process-Supervised LLM Recommenders via Flow-guided Tuning
