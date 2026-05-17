@@ -24,10 +24,25 @@ I received my Bachelor's degree in Electronic Information Engineering from the [
 My research interests include **large language models (LLMs)**, **recommender systems**, and **reinforcement learning**. Outside of research, I enjoy traveling, exploring local cuisine, and listening to Mandarin pop music. I hope to continue growing as a researcher while maintaining a balanced and fulfilling life.
 
 # 🔥 News
+- *2026.05*: &nbsp;🎉🎉 One paper is accepted by **KDD'26** about generative recommendation.
+- *2026.04*: &nbsp;🎉🎉 One survey paper is accepted by **iNew Medicine** about medical reasoning with LLMs.
 - *2025.09*: &nbsp;🎉🎉 One paper is accepted by **NeurIPS'25** as a **Spotlight** about medication recommendation.
 - *2025.04*: &nbsp;🎉🎉 One paper is accepted by **SIGIR'25** about flow-guided LLM recommendation.
 
 # 📑 Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KDD 2026</div><img src='images/UGR.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Uncertainty-aware Generative Recommendation
+
+**Chenxiao Fan**, Chongming Gao, Yaxin Gong, Haoyan Liu, Fuli Feng, Xiangnan He
+
+[**Paper**](https://arxiv.org/pdf/2602.11719)
+[**Code**](https://github.com/cxfann/UGR)
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025 <strong>Spotlight</strong></div><img src='images/FLAME.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -57,7 +72,48 @@ Chongming Gao<sup>#</sup>, Mengyao Gao<sup>#</sup>, **Chenxiao Fan**, Shuai Yuan
 </div>
 </div>
 
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">iNew Medicine</div><img src='images/med_survey.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Medical Reasoning with Large Language Models: A Survey and MR-Bench
+
+Xiaohan Ren, **Chenxiao Fan**, Wenyin Ma, Hongliang He, Chongming Gao, Xiaoyan Zhao, Fuli Feng
+
+[**Paper**](https://arxiv.org/pdf/2604.08559)
+[**Code**](https://github.com/RXH04-USTC/Medical-Reasoning-Survey)
+</div>
+</div>
+
 # 📝 Preprints
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/PAD-Rec.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Position-Aware Drafting for Inference Acceleration in LLM-Based Generative List-Wise Recommendation
+
+Jiaju Chen, Chongming Gao, **Chenxiao Fan**, Haoyan Liu, Qingpeng Cai, Peng Jiang, Xiangnan He
+
+[**Paper**](https://arxiv.org/pdf/2604.27747)
+[**Code**](https://github.com/Jiaju-Chen/PAD-Rec)
+</div>
+</div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/TriRec.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Breaking User-Centric Agency: A Tri-Party Framework for Agent-Based Recommendation
+
+Yaxin Gong, Chongming Gao, **Chenxiao Fan**, Wenjie Wang, Fuli Feng, Xiangnan He
+
+[**Paper**](https://arxiv.org/pdf/2603.10673)
+[**Code**](https://github.com/Marfekey/TriRec)
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/LAMO.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -74,6 +130,7 @@ Zihao Zhao<sup>#</sup>, **Chenxiao Fan**<sup>#</sup>, Junlong Liu, Zheng Wang, X
 </div>
 
 # 🎖 Honors and Awards
+- *2026*: 深信服奖学金
 - *2025*: First-Class Scholarship for Graduate Students  
 - *2025*: Outstanding Graduate of Anhui Province  
 - *2023*: National Scholarship (**for top 2% students**)  
