@@ -130,7 +130,7 @@ Zihao Zhao<sup>#</sup>, **Chenxiao Fan**<sup>#</sup>, Junlong Liu, Zheng Wang, X
 </div>
 
 # 🎖 Honors and Awards
-- *2026*: 深信服奖学金
+- *2026*: Sangfor Scholarship
 - *2025*: First-Class Scholarship for Graduate Students  
 - *2025*: Outstanding Graduate of Anhui Province  
 - *2023*: National Scholarship (**for top 2% students**)  
