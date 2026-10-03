@@ -1,0 +1,4 @@
+type = "publication"
+title = "Publications"
+description = "My full publication list, including peer-reviewed papers and preprints. Underlined author names indicate equal contribution."
+source = "publications.bib"

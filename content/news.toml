@@ -1,0 +1,15 @@
+[[news]]
+date = "2026.05"
+content = "One paper on [uncertainty-aware generative recommendation](https://arxiv.org/abs/2602.11719) was accepted at **KDD 2026**."
+
+[[news]]
+date = "2026.05"
+content = "One survey on [medical reasoning with LLMs](https://doi.org/10.1002/inm3.70056) was accepted by ***iNew Medicine***."
+
+[[news]]
+date = "2025.09"
+content = "One paper on [fine-grained list-wise alignment for medication recommendation](https://arxiv.org/abs/2505.20218) was accepted at **NeurIPS 2025** as a **Spotlight**."
+
+[[news]]
+date = "2025.04"
+content = "One paper on [process-supervised LLM recommendation](https://arxiv.org/abs/2503.07377) was accepted at **SIGIR 2025**."

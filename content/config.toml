@@ -1,0 +1,48 @@
+[site]
+title = "Chenxiao Fan"
+description = "Academic homepage of Chenxiao Fan, a Master's student at USTC working on reliable large language models, reasoning, and generative recommendation."
+url = "https://cxfann.github.io"
+last_updated = "October 2026"
+
+[author]
+name = "Chenxiao Fan"
+title = "Second-year Master's Student"
+institution = "University of Science and Technology of China"
+avatar = "/avatar.jpg"
+
+[social]
+email = "simonfan@mail.ustc.edu.cn"
+location = "Hefei, China"
+location_url = "https://maps.google.com/?q=Hefei%2C+China"
+location_details = ["Hefei, Anhui, China"]
+google_scholar = "https://scholar.google.com/citations?user=1EtC5XoAAAAJ&hl=en"
+orcid = "https://orcid.org/0009-0009-2509-7092"
+github = "https://github.com/cxfann"
+
+[features]
+enable_likes = false
+enable_one_page_mode = false
+
+[i18n]
+enabled = false
+locales = ["en"]
+default_locale = "en"
+mode = "fixed"
+fixed_locale = "en"
+persist = false
+switcher = false
+
+[i18n.labels]
+en = "English"
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"

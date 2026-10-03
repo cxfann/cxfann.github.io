@@ -1,0 +1,40 @@
+type = "about"
+title = "About"
+
+[profile]
+research_interests = [
+  "LLM Reasoning and Alignment",
+  "Uncertainty and Calibration",
+  "Generative Recommendation"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "About"
+
+[[sections]]
+id = "news"
+type = "list"
+title = "News"
+source = "news.toml"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "Selected Publications"
+filter = "selected"
+limit = 7
+
+[[sections]]
+id = "education"
+type = "list"
+title = "Education"
+source = "education.toml"
+
+[[sections]]
+id = "honors"
+type = "list"
+title = "Honors"
+source = "honors.toml"
