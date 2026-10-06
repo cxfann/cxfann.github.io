@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import {
     EnvelopeIcon,
     AcademicCapIcon,
     HeartIcon,
-    MapPinIcon
+    MapPinIcon,
+    XMarkIcon
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
@@ -27,6 +28,23 @@ const OrcidIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
+const WechatIcon = ({ className }: { className?: string }) => (
+    <span
+        aria-hidden="true"
+        className={`inline-block bg-current ${className || ''}`}
+        style={{
+            WebkitMaskImage: "url('/wechat-logo.svg')",
+            maskImage: "url('/wechat-logo.svg')",
+            WebkitMaskRepeat: 'no-repeat',
+            maskRepeat: 'no-repeat',
+            WebkitMaskPosition: 'center',
+            maskPosition: 'center',
+            WebkitMaskSize: 'contain',
+            maskSize: 'contain',
+        }}
+    />
+);
+
 interface ProfileProps {
     author: SiteConfig['author'];
     social: SiteConfig['social'];
@@ -36,6 +54,7 @@ interface ProfileProps {
 
 export default function Profile({ author, social, features, researchInterests }: ProfileProps) {
     const messages = useMessages();
+    const wechatRef = useRef<HTMLDivElement>(null);
 
     const [hasLiked, setHasLiked] = useState(false);
     const [showThanks, setShowThanks] = useState(false);
@@ -43,7 +62,9 @@ export default function Profile({ author, social, features, researchInterests }:
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
-    const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
+    const [showWechat, setShowWechat] = useState(false);
+    const [isWechatPinned, setIsWechatPinned] = useState(false);
+    const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | 'wechat' | null>(null);
 
     // Check local storage for user's like status
     useEffect(() => {
@@ -54,6 +75,30 @@ export default function Profile({ author, social, features, researchInterests }:
             setHasLiked(true);
         }
     }, [features.enable_likes]);
+
+    useEffect(() => {
+        if (!showWechat && !isWechatPinned) return;
+
+        const closeWechat = () => {
+            setShowWechat(false);
+            setIsWechatPinned(false);
+        };
+        const handlePointerDown = (event: PointerEvent) => {
+            if (wechatRef.current && !wechatRef.current.contains(event.target as Node)) {
+                closeWechat();
+            }
+        };
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') closeWechat();
+        };
+
+        document.addEventListener('pointerdown', handlePointerDown);
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('pointerdown', handlePointerDown);
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [showWechat, isWechatPinned]);
 
     const handleLike = () => {
         const newLikedState = !hasLiked;
@@ -75,6 +120,12 @@ export default function Profile({ author, social, features, researchInterests }:
             href: `mailto:${social.email}`,
             icon: EnvelopeIcon,
             isEmail: true,
+        }] : []),
+        ...(social.wechat_qr ? [{
+            name: 'WeChat',
+            href: social.wechat_qr,
+            icon: WechatIcon,
+            isWechat: true,
         }] : []),
         ...(social.location || social.location_details ? [{
             name: messages.profile.location,
@@ -140,6 +191,101 @@ export default function Profile({ author, social, features, researchInterests }:
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 relative px-2">
                 {socialLinks.map((link) => {
                     const IconComponent = link.icon;
+                    if (link.isWechat) {
+                        const isWechatOpen = showWechat || isWechatPinned;
+                        const closeWechat = () => {
+                            setShowWechat(false);
+                            setIsWechatPinned(false);
+                        };
+
+                        return (
+                            <div
+                                key={link.name}
+                                ref={wechatRef}
+                                className="relative"
+                                onMouseEnter={() => setShowWechat(true)}
+                                onMouseLeave={() => !isWechatPinned && setShowWechat(false)}
+                                onFocus={() => setShowWechat(true)}
+                                onBlur={(event) => {
+                                    if (!event.currentTarget.contains(event.relatedTarget)) {
+                                        if (!isWechatPinned) setShowWechat(false);
+                                    }
+                                }}
+                            >
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        const nextPinned = !isWechatPinned;
+                                        setIsWechatPinned(nextPinned);
+                                        setShowWechat(nextPinned);
+                                        setIsAddressPinned(false);
+                                        setShowAddress(false);
+                                        setIsEmailPinned(false);
+                                        setShowEmail(false);
+                                        setLastClickedTooltip('wechat');
+                                    }}
+                                    className={`p-2 transition-colors duration-200 ${isWechatOpen
+                                        ? 'text-accent'
+                                        : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
+                                        }`}
+                                    aria-label="Show WeChat QR code"
+                                    aria-haspopup="dialog"
+                                    aria-expanded={isWechatOpen}
+                                    aria-controls="wechat-qr-card"
+                                >
+                                    <IconComponent className="h-5 w-5" />
+                                </button>
+
+                                <AnimatePresence>
+                                    {isWechatOpen && (
+                                        <motion.div
+                                            id="wechat-qr-card"
+                                            role="dialog"
+                                            aria-label="WeChat QR code"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.16 }}
+                                            className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/55 p-4 backdrop-blur-[2px] sm:absolute sm:inset-auto sm:bottom-full sm:left-1/2 sm:z-30 sm:mb-3 sm:block sm:-translate-x-1/2 sm:bg-transparent sm:p-0 sm:backdrop-blur-none"
+                                            onClick={(event) => {
+                                                if (event.currentTarget === event.target) closeWechat();
+                                            }}
+                                        >
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                                                transition={{ duration: 0.18, ease: 'easeOut' }}
+                                                className="relative w-[min(16rem,calc(100vw-2rem))] rounded-2xl border border-neutral-200 bg-white p-3 shadow-2xl dark:border-neutral-700"
+                                            >
+                                                <button
+                                                    type="button"
+                                                    onClick={closeWechat}
+                                                    className="absolute right-2 top-2 rounded-full p-1.5 text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-900 sm:hidden"
+                                                    aria-label="Close WeChat QR code"
+                                                >
+                                                    <XMarkIcon className="h-5 w-5" />
+                                                </button>
+                                                <div className="mb-2 px-1 text-left">
+                                                    <p className="text-sm font-semibold text-neutral-900">WeChat</p>
+                                                    <p className="text-xs text-neutral-500">Scan to connect</p>
+                                                </div>
+                                                <Image
+                                                    src={social.wechat_qr || ''}
+                                                    alt="Chenxiao Fan's WeChat QR code"
+                                                    width={731}
+                                                    height={740}
+                                                    className="h-auto w-full rounded-xl bg-white"
+                                                    priority
+                                                />
+                                                <div className="absolute -bottom-1.5 left-1/2 hidden h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-neutral-200 bg-white sm:block dark:border-neutral-700" />
+                                            </motion.div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        );
+                    }
                     if (link.isLocation) {
                         return (
                             <div key={link.name} className="relative">

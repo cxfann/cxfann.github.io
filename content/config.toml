@@ -12,6 +12,7 @@ avatar = "/avatar.jpg"
 
 [social]
 email = "simonfan@mail.ustc.edu.cn"
+wechat_qr = "/wechat-qr.png"
 location = "Hefei, China"
 location_url = "https://maps.google.com/?q=Hefei%2C+China"
 location_details = ["Hefei, Anhui, China"]
